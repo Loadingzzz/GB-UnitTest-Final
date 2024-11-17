@@ -1,8 +1,18 @@
 package main.hw;
 
 import java.util.List;
-
+/**
+ * Класс TwoLists, это мой main класс в котором будет написан код.
+ * */
 public class TwoLists {
+    /**
+     * Метод twoListsMassage принимает на вход 2 списка,
+     * рассчитывает их среднее значение и выдает
+     * сообщение по результатам расчета.
+     * @param firstList - список чисел.
+     * @param secondList - список чисел.
+     * @return  - возвращает текст сообщения.
+     * */
     public static String twoListsMassage(final List<Integer> firstList,
                                          final List<Integer> secondList) {
         double firstAverage = calculateAverage(firstList);
@@ -22,7 +32,14 @@ public class TwoLists {
         }
         return result;
     }
+    /**
+     * Метод calculateAverage принимает на вход список чисел
+     * и рассчитывает его среднее значение.
+     * @param list - список чисел.
+     * @return - возвращает среднее значение списка.
+     * */
     public static double calculateAverage(final List<Integer> list) {
+
         if (list == null || list.isEmpty()) {
             return 0;
         }
@@ -30,6 +47,7 @@ public class TwoLists {
         for (int num : list) {
             sum = sum + num;
         }
+
         return (double) sum / list.size();
     }
 }
